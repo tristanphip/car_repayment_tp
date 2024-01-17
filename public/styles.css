@@ -1,0 +1,120 @@
+body {
+    background-color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ccc;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.dashboard {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 0 calc(50% - 40px);
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #2d2d2d;
+    text-align: center;
+}
+
+.history-log-container {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    flex: 1 0 calc(50% - 40px);
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #2d2d2d;
+    text-align: center;
+    position: relative;
+}
+
+.history-log {
+    position: absolute;
+    top: 10%;
+    left: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #2d2d2d;
+    text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.history-log-container h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #555;
+    margin: 0;
+}
+
+.entry-form {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 0 calc(50% - 40px);
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #2d2d2d;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #ccc;
+    margin-bottom: 4px;
+}
+
+input {
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

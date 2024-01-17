@@ -8,5 +8,3 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-document.getElementById("testData").innerText = "I haev ben chenged ):....";
