@@ -1,0 +1,69 @@
+:root {
+    --text: #9dffbf;
+    --highlight: #02735E;
+    --background: #034159;
+    --border: #02735E;
+    --footer: #025951;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text);
+}
+
+main {
+    text-align: center;
+}
+
+.formContainer {
+    max-width: 400px;
+    padding: 20px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+}
+
+button {
+    background-color: #035359;
+    color: var(--text);
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(10, 91, 122);
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
