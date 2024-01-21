@@ -10,10 +10,52 @@
 <main>
     <section class="container" id="quick-view">
         <h2>Quick View</h2>
+        <div class="quick-view-components">
+            <div class="quick-view-component">
+                <p class="component-label">Final Value</p>
+                <p class="component-value">R130000</p>
+            </div>
+
+            <div class="quick-view-component">
+                <p class="component-label">Current Payment Amount</p>
+                <p class="component-value">R0</p>
+            </div>
+
+            <div class="quick-view-component">
+                <p class="component-label">Amount Remaining</p>
+                <p class="component-value">R130000</p>
+            </div>
+
+            <div class="quick-view-component">
+                <p class="component-label">Months Left</p>
+                <p class="component-value">36</p>
+            </div>
+
+            <div class="quick-view-component">
+                <p class="component-label">Progress</p>
+                <div class="dashboard">
+                    <svg>
+                        <circle class="bg" cx="57" cy="57" r="52" />
+                        <circle class="meter-1" cx="57" cy="57" r="52" />
+                    </svg>
+                </div>
+            </div>
     </section>
 
     <section class="container" id="add-payment">
-        <h2>Add Payment</h2>
+        <h2>Enter Payment Record</h2>
+        <form id="paymentForm">
+            <label for="paymentDate">Date of payment:</label><br />
+            <input type="date" id="paymentDate" name="payDate" required /><br />
+
+            <label for="amount">Payment Amount:</label><br />
+            <input type="int" id="amount" name="payAmount" value=3000 required />
+
+            <label for="paytype">Payment Type:</label><br />
+            <input type="text" id="paytype" placeholder="Deposit" required>
+
+            <button type="button" onclick="submitPayment()">Submit</button>
+        </form>
     </section>
 
     <section class="container" id="payment-history">

@@ -34,3 +34,35 @@ function fetchDataAndGenerateTable() {
         console.error("Error fetching data: ", error);
     });
 }
+
+function submitPayment() {
+    var paymentDate = document.getElementById('paymentDate').value;
+    var amount = parseInt(document.getElementById('amount').value);
+    var paymentType = document.getElementById('paytype').value;
+
+    if (!paymentDate || isNaN(amount)) {
+        alert("Please enter valid data and amount.");
+        return;
+    }
+
+    if (paymentType.charAt(0).toUpperCase() == 'S') {
+        paymentType = "Scheduled";
+    } else {
+        paymentType = "Deposit";
+    }
+
+    document.getElementById('paytype').value = paymentType;
+
+    var paymentHistoryRef = firebase.firestore().collection('paymentHistory');
+    paymentHistoryRef.add({
+        date: new Date(paymentDate),
+        amount: amount,
+        type: paymentType
+    }).then(function () {
+        fetchDataAndGenerateTable();
+        document.getElementById('paymentForm').reset();
+    }).catch(function (error) {
+        console.error("Error adding document: ", error);
+    });
+}
+

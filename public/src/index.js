@@ -28,10 +28,12 @@ function loadDashboardPage(username) {
             .then(html => {
                 document.getElementById('app').innerHTML = html;
                 document.getElementById('userName').innerHTML = "Welcome, " + username + ".";
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('paymentDate').value = today;
                 fetchDataAndGenerateTable();
             });
     } else {
-        alert("Nononono... not allowed!");
+        alert("Unauthorised!");
     }
 }
 
