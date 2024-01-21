@@ -122,7 +122,7 @@ th {
     text-align: center;
     margin: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid var(--border); */
     border-radius: 8px;
 }
 
@@ -174,4 +174,20 @@ svg {
     to {
         stroke-dashoffset: 350;
     }
+}
+
+.quick-view-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.quick-view-table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.component-label {
+    font-weight: bold;
 }
