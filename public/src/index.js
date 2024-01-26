@@ -16,6 +16,13 @@ function loadLoginPage() {
             particlesJS.load('particles-js', 'src/particles.json', function () {
                 console.log('callback - particles.js config loaded');
             });
+            var passwordy = document.getElementById("password");
+            passwordy.addEventListener("keydown", function (e) {
+                if (e.code === "Enter") {
+                    console.log("enter");
+                    attemptLogin();
+                }
+            });
         });
 }
 
